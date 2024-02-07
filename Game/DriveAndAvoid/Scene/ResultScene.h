@@ -23,6 +23,6 @@ public:
 	virtual eSceneType GetNowScene() const override;
 
 private:
-	void ReadResultDate();
+	void ReadResultData();
 };
 

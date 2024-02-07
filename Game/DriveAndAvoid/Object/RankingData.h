@@ -9,8 +9,8 @@ private:
 	char name[6][15];  //名前データ
 
 public:
-	RankingDate();
-	~RankingDate();
+	RankingData();
+	~RankingData();
 
 	void Initialize(); //初期化処理
 	void Finalize();   //終了処理
@@ -26,6 +26,6 @@ public:
 	const char* GetName(int value)const;
 private:
 	//データ入れ替え処理
-	void SoreData();
+	void SortData();
 };
 

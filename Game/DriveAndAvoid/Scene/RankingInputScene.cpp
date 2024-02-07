@@ -168,7 +168,7 @@ bool RankingInputScene::InputName()
 	}
 	if (InputControl::GetButtonDown(XINPUT_BUTTON_DPAD_UP))
 	{
-		if (cursor_y > 0
+		if (cursor_y > 0)
 		{
 			cursor_y--;
 		}

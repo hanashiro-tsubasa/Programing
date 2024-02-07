@@ -20,7 +20,7 @@ void Player::Initialize()
 {
     is_active = true;
     location = Vector2D(320.0f, 380.0f);
-    box_size = Vector2D(31.0f.60.0f);
+    box_size = Vector2D(31.0f,60.0f);
     angle = 0.0f;
     speed = 3.0f;
     hp = 1000;
@@ -67,7 +67,7 @@ void Player::Update()
     }
 
     //バリア処理
-    if (inputControl::GetButtonDown(XINPUT_BUTTON_B) && barrier_count > 0)
+    if (InputControl::GetButtonDown(XINPUT_BUTTON_B) && barrier_count > 0)
     {
         if (barrier == nullptr)
         {
@@ -130,7 +130,7 @@ void Player::DecreaseHp(float value)
 //位置情報取得処理
 Vector2D Player::GetLocation()const
 {
-    return this->GetLocation;
+    return this->location;
 }
 
 //当たり判定の大きさ取得処理
@@ -167,7 +167,7 @@ int Player::GetBarriarCount()const
 //バリア有効か？を取得
 bool Player::IsBarrier()const
 {
-    return(barreier != nullptr;)
+    return(barrier != nullptr);
 }
 
 //移動処理

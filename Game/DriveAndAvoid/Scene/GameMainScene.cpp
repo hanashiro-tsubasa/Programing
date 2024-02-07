@@ -277,3 +277,4 @@ bool GameMainScene::IsHitCheck(Player* p, Enemy* e)
 		return ((fabsf(diff_location.x) < box_ex.x) && (fabsf(diff_location.y) <
 			box_ex.y));
 	}
+}

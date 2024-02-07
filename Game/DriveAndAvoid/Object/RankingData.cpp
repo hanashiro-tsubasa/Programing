@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 
-RankingData::SetRankingData()
+RankingData::RankingData()
 {
 	for (int i = 0; i < 6; i++)
 	{
@@ -15,7 +15,7 @@ RankingData::SetRankingData()
 	}
 }
 
-RankingData::SetRankingData()
+RankingData::~RankingData()
 {
 
 }

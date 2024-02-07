@@ -97,7 +97,7 @@ eSceneType ResultScene::GetNowScene() const
 }
 
 //リザルトデータの読み込み
-void ResultScene::ReadResultDate()
+void ResultScene::ReadResultData()
 {
 	//ファイルオープン
 	FILE* fp = nullptr;
