@@ -39,7 +39,7 @@ void RankingData::Initialize()
 	for (int i = 0; i < 5; i++)
 	//2
 	{
-		fscanf_s(fp, "%6d,%2d,%[^,]\n", &score[i], &rank[i], name[i], 15);
+		fscanf_s(fp, "%6d,%2d,%[^,],\n", &score[i], &rank[i], name[i], 15);
 	}
 
 	//ファイルクローズ
@@ -92,7 +92,7 @@ void RankingData::SortData()
 	{
 		for (int j = i + 1; j < 6; j++)
 		{
-			if (score[i <= score[j]])
+			if (score[i] <= score[j])
 			{
 				int tmp = score[i];
 				score[i] = score[j];

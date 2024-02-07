@@ -110,13 +110,13 @@ void ResultScene::ReadResultData()
 	}
 	
 	//結果を読み込む
-	fscanf_s(fp, "%6d,\n,&score");
+	fscanf_s(fp, "%6d,\n",&score);
 
 	//避けた数と得点を取得
 	for (int i = 0; i < 3; i++)
 	{
 		//4///////////////////////////////////////
-		fscanf_s(fp, "%6d\n", &enemy_count[i]);
+		fscanf_s(fp, "%6d,\n", &enemy_count[i]);
 	}
 	//ファイルクローズ
 	fclose(fp);

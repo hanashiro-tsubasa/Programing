@@ -182,6 +182,8 @@ void GameMainScene::Draw() const
 	fx = 510.0f;
 	fy = 430.0f;
 	DrawFormatString(fx, fy, GetColor(0, 0, 0), "PLAYER HP");
+	DrawBoxAA(fx, fy + 20.0f, fx + (player->GetHp() * 100 / 1000), fy + 40.0f,
+		GetColor(255, 0, 0), TRUE);
 	DrawBoxAA(fx, fy + 20.0f, fx + 100.0f, fy + 40.0f, GetColor(0, 0, 0),
 		FALSE);
 }
@@ -260,7 +262,7 @@ bool GameMainScene::IsHitCheck(Player* p, Enemy* e)
 	if (p->IsBarrier())
 	{
 		return false;
-
+	}
 		//敵情報がなければ、当たり判定を無視する
 		if (e == nullptr)
 		{
@@ -276,5 +278,5 @@ bool GameMainScene::IsHitCheck(Player* p, Enemy* e)
 		//コリジョンデータより位置情報の差分が小さいなら、ヒット判定とする
 		return ((fabsf(diff_location.x) < box_ex.x) && (fabsf(diff_location.y) <
 			box_ex.y));
-	}
+	
 }
